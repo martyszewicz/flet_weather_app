@@ -1,7 +1,7 @@
 import requests
 from requests.structures import CaseInsensitiveDict
 
-API_KEY = "472ef6d8e7ad4b34a15865e5d161f841"
+API_KEY = "MY_API_KEY"
 
 
 def get_location_details(location):
