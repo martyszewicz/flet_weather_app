@@ -1,8 +1,7 @@
 import requests
 from requests.structures import CaseInsensitiveDict
-import flet
 
-API_KEY = "YOUR API KEY"
+API_KEY = "472ef6d8e7ad4b34a15865e5d161f841"
 
 
 def get_location_details(location):

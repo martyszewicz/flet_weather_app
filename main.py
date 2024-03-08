@@ -1,11 +1,14 @@
 import flet
 from flet import *
 from location_details import get_location_details
+from weather_details import Weaher_details
+
 
 WINDOW_WIDTH = 412
 WINDOW_HEIGHT = 732
 
 
+weather_details = Weaher_details
 
 def main(page:Page):
 	page.horizontal_alignment = "center"
@@ -24,11 +27,15 @@ def main(page:Page):
 				location_details.value =  "Error, cant find data about this location"
 				page.update()
 			if localisation_data:
+				print(localisation_data)
 				location_details.value = localisation_data[0]
+				current_weather_details = weather_details(localisation_data).current_weather()
+				print(current_weather_details)
+				print("b")
 				page.update()
 			return localisation_data
 
-		new_location = TextField(label="City", width=250)
+		new_location = TextField(label="Location", width=250)
 		location_details = Text()
 		top = Container(
 			width=WINDOW_WIDTH,
