@@ -5,7 +5,7 @@ import requests
 
 class Weaher_details():
 	def __init__(self, localisation):
-		self.apikey = "9LXoLlnUWGWlYXGKfC2mZgdYnCZjDY76"
+		self.apikey = "my_api_key"
 		self.localisation = [localisation[1], localisation[2]]
 		self.url = "https://api.tomorrow.io/v4/timelines"
 		self.units = "metric"
